@@ -19,12 +19,12 @@ img {
     vertical-align: middle;
 }
 
-.games_container {
+.games__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: min(90%, 1200px);
+    width: min(95%, 1250px);
     padding: 3rem .5rem;
 }
 
@@ -63,10 +63,21 @@ img {
     opacity: 0;
 }
 
-.game__card:hover::after {
+.game__card:is(:hover, :focus)::after {
     opacity: 1;
 }
 
-.game__card:hover::before {
+.game__card:is(:hover, :focus)::before {
     background-color: rgba(0, 0, 0, .2);
+}
+
+@media screen and (max-width: 768px) {
+    .games__container {
+        flex-direction: column;
+    }
+
+    .game__card {
+        width: 65%;
+        margin: 2rem 0;
+    }
 }
