@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #dadada;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: rgb(68, 3, 55);
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    width: 500px;
+    min-height: 500px;
+    margin: 3rem auto;
+    background-color: #f4f4f4;
+}
+
+.board #game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 5px;
+    color: white;
+    font-size: 1.3rem;
+    z-index: 10;
+}
+
+.board #game-over span {
+    margin: 1.3rem 0;
+}
+
+
+.board #game-over :is( #play_again, #submit_score ) {
+    text-decoration: underline;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+
+.board .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #bdbdbd;
+    border-color: #bdbdbd;
+    border-style: outset;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: transparent;
+}
+
+.board .cell span::selection {
+    background: none;
+    color: transparent;
+}
+
+.board .cell.empty {
+    cursor: pointer;
+}
+
+.board .cell .fa-bomb {
+    display: none;
+    color: black;
+}
+
+.board .cell.show .fa-bomb {
+    display: inline;
+}
+
+.board .cell .show {
+    display: inline;
+    cursor: default;
+    color: inherit;
+}
+
+
+.fa-flag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 81, 0);
+}
+
+.fa-flag,
+span,
+*.show {
+    pointer-events: none;
+}
+
+#submit_score_window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 39, 5, 0.9);
+    z-index: 100;
+}
+
+#submit_score_window input {
+    width: 50%;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#submit_score_window .high-scores {
+    font-family: 'Syne Mono', monospace;
+    font-size: 2rem;
+    color: white;
+}
+
+#submit_score_window .scores-container {
+    width: 40%;
+}
+
+#submit_score_window .score-div {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    font-family: 'Syne Mono', monospace;
+}
+
+
+
+.none.show { background-color: #776e6e !important; color: transparent; border: 1px solid #444; }
+.one.show { color: blue !important}
+.two.show { color: green; }
+.three.show { color: red; }
+.four.show { color: purple; }
+.five.show { color: rgb(212, 78, 0); }
+.six.show { color: rgb(223, 0, 204); }
+.seven.show { color: rgb(0, 0, 0); }
+.eight.show { color: rgb(0, 122, 47); }
+
+
+
+
+@media screen and ( max-width: 550px ) {
+
+    .board {
+        width: 300px;
+        min-height: 300px;
+    }
+
+    .board .cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+
+
+

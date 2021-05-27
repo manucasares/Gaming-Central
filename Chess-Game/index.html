@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./script/main.js" ></script>
+</head>
+<body>
+
+    
+    <div class="game-info">  
+        <h1>Chess</h1>
+        <p>Chess is a two-player strategy board game played on a chessboard, a checkered board with 64 squares arranged in an 8×8 square grid. Played by millions of people worldwide, chess is believed to be derived from the Indian game chaturanga sometime before the 7th century. </p>
+
+        <p>Play involves no hidden information. Each player begins with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. Each piece type moves differently, with the most powerful being the queen and the least powerful the pawn. The objective is to checkmate the opponent's king by placing it under an inescapable threat of capture. To this end, a player's pieces are used to attack and capture the opponent's pieces, while supporting one another. During the game, play typically involves exchanging pieces for the opponent's similar pieces, and finding and engineering opportunities to trade advantageously or to get a better position. In addition to checkmate, a player wins the game if the opponent resigns, or in a timed game, runs out of time. There are also several ways a game can end in a draw.</p>
+    </div>
+
+    <h1 class="turn" id="turn">TURN: WHITE</h1>
+
+    <div class="board-border">
+        <div class="board">
+            <div data-square="A8" class="square white-square"></div>
+            <div data-square="B8" class="square black-square"></div>
+            <div data-square="C8" class="square white-square"></div>
+            <div data-square="D8" class="square black-square"></div>
+            <div data-square="E8" class="square white-square"></div>
+            <div data-square="F8" class="square black-square"></div>
+            <div data-square="G8" class="square white-square"></div>
+            <div data-square="H8" class="square black-square"></div>
+            <div data-square="A7" class="square black-square"></div>
+            <div data-square="B7" class="square white-square"></div>
+            <div data-square="C7" class="square black-square"></div>
+            <div data-square="D7" class="square white-square"></div>
+            <div data-square="E7" class="square black-square"></div>
+            <div data-square="F7" class="square white-square"></div>
+            <div data-square="G7" class="square black-square"></div>
+            <div data-square="H7" class="square white-square"></div>
+            <div data-square="A6" class="square white-square"></div>
+            <div data-square="B6" class="square black-square"></div>
+            <div data-square="C6" class="square white-square"></div>
+            <div data-square="D6" class="square black-square"></div>
+            <div data-square="E6" class="square white-square"></div>
+            <div data-square="F6" class="square black-square"></div>
+            <div data-square="G6" class="square white-square"></div>
+            <div data-square="H6" class="square black-square"></div>
+            <div data-square="A5" class="square black-square"></div>
+            <div data-square="B5" class="square white-square"></div>
+            <div data-square="C5" class="square black-square"></div>
+            <div data-square="D5" class="square white-square"></div>
+            <div data-square="E5" class="square black-square"></div>
+            <div data-square="F5" class="square white-square"></div>
+            <div data-square="G5" class="square black-square"></div>
+            <div data-square="H5" class="square white-square"></div>
+            <div data-square="A4" class="square white-square"></div>
+            <div data-square="B4" class="square black-square"></div>
+            <div data-square="C4" class="square white-square"></div>
+            <div data-square="D4" class="square black-square"></div>
+            <div data-square="E4" class="square white-square"></div>
+            <div data-square="F4" class="square black-square"></div>
+            <div data-square="G4" class="square white-square"></div>
+            <div data-square="H4" class="square black-square"></div>
+            <div data-square="A3" class="square black-square"></div>
+            <div data-square="B3" class="square white-square"></div>
+            <div data-square="C3" class="square black-square"></div>
+            <div data-square="D3" class="square white-square"></div>
+            <div data-square="E3" class="square black-square"></div>
+            <div data-square="F3" class="square white-square"></div>
+            <div data-square="G3" class="square black-square"></div>
+            <div data-square="H3" class="square white-square"></div>
+            <div data-square="A2" class="square white-square"></div>
+            <div data-square="B2" class="square black-square"></div>
+            <div data-square="C2" class="square white-square"></div>
+            <div data-square="D2" class="square black-square"></div>
+            <div data-square="E2" class="square white-square"></div>
+            <div data-square="F2" class="square black-square"></div>
+            <div data-square="G2" class="square white-square"></div>
+            <div data-square="H2" class="square black-square"></div>
+            <div data-square="A1" class="square black-square"></div>
+            <div data-square="B1" class="square white-square"></div>
+            <div data-square="C1" class="square black-square"></div>
+            <div data-square="D1" class="square white-square"></div>
+            <div data-square="E1" class="square black-square"></div>
+            <div data-square="F1" class="square white-square"></div>
+            <div data-square="G1" class="square black-square"></div>
+            <div data-square="H1" class="square white-square"></div>
+    
+            <div class="checkmate" id="checkmate">
+                <p class="checkmate-text animate__animated animate__fadeIn" id="checkmate_text" >White wins!</p>
+                <p class="play_again checkmate-text animate__animated animate__fadeIn" id="play_again" >Play again?</p>
+            </div>
+
+            <!-- PROMOTION -->
+            <div class="promotion-container" id="promotion-white">
+                <div class="promotion promotion-white">
+                    <div class="two-piece">
+                        <img class="promotion-piece" src="/images/w-queen.png" alt="white queen" data-piece="white queen" />
+                        <img class="promotion-piece" src="/images/w-rook.png" alt="white rook" data-piece="white rook" >
+                    </div>
+                    <div class="two-piece">
+                        <img class="promotion-piece" src="/images/w-bishop.png" alt="white bishop" data-piece="white bishop" >
+                        <img class="promotion-piece" src="/images/w-knight.png" alt="white knight" data-piece="white knight" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="promotion-container" id="promotion-black">
+                <div class="promotion promotion-black" id="promotion-black">
+                    <div class="two-piece">
+                        <img class="promotion-piece" src="/images/b-queen.png" alt="black queen" data-piece="black queen" >
+                        <img class="promotion-piece" src="../images/b-rook.png" alt="black rook" data-piece="black rook" >
+                    </div>
+                    <div class="two-piece">
+                        <img class="promotion-piece" src="/images/b-bishop.png" alt="black bishop" data-piece="black bishop" >
+                        <img class="promotion-piece" src="/images/b-knight.png" alt="black knight" data-piece="black knight" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>

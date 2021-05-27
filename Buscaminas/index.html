@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/fc369b8969.js" crossorigin="anonymous"></script>
+    <script src="./script/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Minesweeper</title>
+</head>
+<body>
+    <div id="board" class="board">
+
+        <div id="game-over" class="animate__animated animate__fadeIn">
+            <span id="end_game_text">Game over!</span>
+            <span id="time"></span>
+            <span id="play_again">Play again?</span>
+            <span id="submit_score">Submit your score</span>
+        </div>
+
+    </div>
+
+    <form id="submit_score_window" class="animate__animated animate__fadeIn">
+        <input type="text" placeholder="Enter your name" minlength="3" maxlength="10" />
+        <h2 class="high-scores">High Scores</h2>
+        <div id="scores_container" class="scores-container"></div>
+    </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+*, ::before, ::after { box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #02020a;
+}
+
+a {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.games_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: min(90%, 1200px);
+    padding: 3rem .5rem;
+}
+
+.game__card {
+    position: relative;
+    width: 30%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.game__card:hover {
+    transform: scale(1.05);
+}
+
+.game__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .3s ease;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.game__card::after {
+    content: attr(data-game);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: clamp(14px, 3vw, 30px);
+    font-style: italic;
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.game__card:hover::after {
+    opacity: 1;
+}
+
+.game__card:hover::before {
+    background-color: rgba(0, 0, 0, .2);
+}
