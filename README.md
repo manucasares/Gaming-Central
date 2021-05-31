@@ -1,4 +1,4 @@
-# Kitchen Inventory
+# Gaming Central
 
 ![Gaming Central](https://i.imgur.com/rcx3kmu.png "Gaming Central")
 
