@@ -2,7 +2,7 @@
 
 ![Gaming Central](https://i.imgur.com/rcx3kmu.png "Gaming Central")
 
-_Una central de videojuegos en donde podrás disfrutar de tres grandes clásicos: Buscaminas, Ajedrez y Cuatro en Raya. Todo hecho con Javascript puro y sin librerías._
+_Una central de videojuegos en donde podrás disfrutar de cuatro grandes clásicos: Buscaminas, Damas, Ajedrez y Cuatro en Raya. Todo hecho con Javascript puro y sin librerías._
 
 ## Comenzando 🚀
 
