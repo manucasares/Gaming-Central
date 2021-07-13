@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer type="module"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Checkers</title>
+</head>
+<body>
+    
+    <main class="content">
+        <div class="turn" id="turn" data-turn="black">
+            <div class="active-turn black-turn">Black</div>
+            <div class="red-turn">Red</div>
+        </div>
+        
+        <div class="board" id="board"></div> 
+    </main>
+
+    <section class="game-over" id="game_over" >
+        <h3><span id="team">Black</span> Wins!</h3>
+        <button id="play_again" class="play-again">
+            Play Again?
+        </button>
+    </section>
+
+</body>
+</html>
