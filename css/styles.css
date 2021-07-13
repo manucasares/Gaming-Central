@@ -3,9 +3,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     background-color: #02020a;
 }
@@ -19,18 +21,25 @@ img {
     vertical-align: middle;
 }
 
+.title {
+    color: white;
+    font-size: clamp(18px, 4.5vw, 45px);
+    margin-bottom: 0;
+}
+
 .games__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    gap: 2.5rem;
     width: min(95%, 1250px);
     padding: 3rem .5rem;
 }
 
 .game__card {
     position: relative;
-    width: 30%;
+    width: 40%;
     transition: all .3s ease;
     cursor: pointer;
 }
@@ -77,7 +86,7 @@ img {
     }
 
     .game__card {
-        width: 65%;
+        width: 75%;
         margin: 2rem 0;
     }
 }
