@@ -21,7 +21,7 @@ img {
     vertical-align: middle;
 }
 
-.title {
+h1 {
     color: white;
     font-size: clamp(18px, 4.5vw, 45px);
     margin-bottom: 0;
